@@ -1,15 +1,16 @@
 import smtplib 
 import os 
 from dotenv import load_dotenv, find_dotenv 
+import logging
 
 load_dotenv(find_dotenv()) 
 
 
 letter="""
-From: {send_adress}
-To: {recip_adress}
-Subject: {heading}
-Content-Type: text/plain; charset="UTF-8";      
+From: {send_adress} \
+To: {recip_adress} \
+Subject: {heading} \
+Content-Type: text/plain; charset="UTF-8";       
 
 Привет, %friend_name%! %my_name% приглашает тебя на сайт %website%! 
 %website% — это новая версия онлайн-курса по программированию. 
@@ -50,6 +51,6 @@ server = smtplib.SMTP_SSL('smtp.mail.ru:465')
 server.login(send_adress, password_name)
 server.sendmail(send_adress,recip_adress, letter)
 
-print(letter)
-
 server.quit()
+
+logging.debug('лишний вызов print')
