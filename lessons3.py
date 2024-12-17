@@ -6,11 +6,11 @@ import logging
 load_dotenv(find_dotenv()) 
 
 
-letter="""
-From: {send_adress} \
-To: {recip_adress} \
-Subject: {heading} \
-Content-Type: text/plain; charset="UTF-8";       
+letter="""From: {send_adress} 
+To: {recip_adress} 
+Subject: {heading} 
+Content-Type: text/plain; charset="UTF-8";  
+
 
 Привет, %friend_name%! %my_name% приглашает тебя на сайт %website%! 
 %website% — это новая версия онлайн-курса по программированию. 
