@@ -52,5 +52,3 @@ server.login(send_adress, password_name)
 server.sendmail(send_adress,recip_adress, letter)
 
 server.quit()
-
-logging.debug('лишний вызов print')
